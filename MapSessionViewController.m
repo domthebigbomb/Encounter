@@ -22,6 +22,7 @@
 @implementation MapSessionViewController{
     GMSMapView *mapView_;
     BOOL firstLocationUpdate_;
+    BOOL mapHasLoaded_;
     NSString *sessionUrl;
     NSString *usersUrl;
     Firebase *session;
@@ -54,6 +55,7 @@
     UUID = nil;
     session = nil;
     users = nil;
+    mapView_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -71,6 +73,8 @@
     users = [[Firebase alloc] initWithUrl:usersUrl];
     
     markers_ = [[NSMutableArray alloc] init];
+    
+    mapHasLoaded_ = NO;
     
     UIBarButtonItem *fitBoundsButton =
     [[UIBarButtonItem alloc] initWithTitle:@"Fit"
@@ -110,8 +114,6 @@
             _mapNavigationBar.title = [NSString stringWithFormat:@"Room %lu: %lu people",self.roomNumber, self.numPeople];
         }
         
-        //[[[session childByAppendingPath:roomString] childByAppendingPath:@"list"] setValue:usersInRoom];
-        
     }];
      
     
@@ -142,8 +144,6 @@
     //Track All Room Participants
     [users observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSMutableArray *originalUsers = [deviceMap objectForKey:@"list"];
-        
-        //[originalUsers removeObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
         
         NSMutableArray *usersInRoom = [[NSMutableArray alloc] init];
         NSMutableArray *coordinates = [[NSMutableArray alloc] init];
@@ -181,7 +181,6 @@
                     NSLog(@"Distance : %@", [directionResponse distanceHumanized]);
                     
                     NSArray *routes = [[directionResponse directionResponse] objectForKey:@"routes"];
-                    // NSLog(@"Route : %@", [[directionResponse directionResponse] objectForKey:@"routes"]);
                     
                     GMSPath *path = [GMSPath pathFromEncodedPath:routes[0][@"overview_polyline"]  [@"points"]];
                     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
@@ -246,6 +245,10 @@
 
 #pragma mark - KVO updates
 
+-(void)refreshMyLocation{
+    firstLocationUpdate_ = NO;
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
@@ -273,9 +276,15 @@
         marker.map = mapView_;
 
         //Add/Update user in the encounter-users
+
         [[users childByAppendingPath: UUID] setValue:userStringCoord];
+        if(!mapHasLoaded_){
+            mapView_.camera = [GMSCameraPosition cameraWithTarget:location.coordinate zoom:14];
+            mapHasLoaded_ = YES;
+        }
+        [self performSelector:@selector(refreshMyLocation) withObject:nil afterDelay:10.0];
+    }else{
         
-        mapView_.camera = [GMSCameraPosition cameraWithTarget:location.coordinate zoom:14];
     }
 }
 

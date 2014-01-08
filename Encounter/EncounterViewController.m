@@ -21,14 +21,6 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     self.navigationController.navigationBar.hidden = NO;
-    /*
-    if([segue.identifier isEqualToString:@"Create Room"])
-    {
-        if([segue.destinationViewController isKindOfClass:[CreateRoomViewController class]]){
-            //CreateRoomViewController *crvs = (CreateRoomViewController *)segue.destinationViewController;
-        }
-    }
-     */
 }
 
 - (void)viewDidLoad

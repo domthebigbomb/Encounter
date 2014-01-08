@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40B35726-4B33-4B96-8450-9B0938FDB75D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Encounter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CC33A2B5-D231-46D7-8519-7BE40A153857</key>
+		<string>https://github.com/domthebigbomb/Encounter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Encounter.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CC33A2B5-D231-46D7-8519-7BE40A153857</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/domthebigbomb/Encounter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CC33A2B5-D231-46D7-8519-7BE40A153857</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC33A2B5-D231-46D7-8519-7BE40A153857</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Encounter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
