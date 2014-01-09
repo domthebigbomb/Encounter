@@ -225,8 +225,8 @@
 
 -(IBAction)foundButton:(UIButton *)sender{
     //MAKE FOUND BUTTON UNWIND SEGUE
-     [self dismissViewControllerAnimated:YES completion:^{
-     }];
+    //[self performSegueWithIdentifier:@"cancel" sender:self];
+     //[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)didTapFitBounds {
@@ -271,9 +271,9 @@
         double lat = [[userCoordinates objectForKey:@"latitude"] doubleValue];
         double lon = [[userCoordinates objectForKey:@"longitude"] doubleValue];
         CLLocationCoordinate2D position = CLLocationCoordinate2DMake(lat, lon);
-        GMSMarker *marker = [GMSMarker markerWithPosition:position];
-        [markers_ addObject:marker];
-        marker.map = mapView_;
+        //GMSMarker *marker = [GMSMarker markerWithPosition:position];
+        //[markers_ addObject:marker];
+        //marker.map = mapView_;
 
         //Add/Update user in the encounter-users
 
@@ -282,7 +282,7 @@
             mapView_.camera = [GMSCameraPosition cameraWithTarget:location.coordinate zoom:14];
             mapHasLoaded_ = YES;
         }
-        [self performSelector:@selector(refreshMyLocation) withObject:nil afterDelay:10.0];
+        [self performSelector:@selector(refreshMyLocation) withObject:nil afterDelay:1.0];
     }else{
         
     }

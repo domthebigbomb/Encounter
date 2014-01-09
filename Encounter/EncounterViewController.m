@@ -31,6 +31,10 @@
 	
 }
 
+-(IBAction)cancel:(UIStoryboardSegue *)segue{
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
