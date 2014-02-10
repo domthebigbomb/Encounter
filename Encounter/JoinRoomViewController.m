@@ -59,6 +59,7 @@
 
 -(void)viewDidLoad
 {
+    NSLog(@"Join Room View");
     sessionUrl = @"https://encounter-sessions.firebaseio.com/";
     usersUrl = @"https://encounter-users.firebaseio.com/";
     

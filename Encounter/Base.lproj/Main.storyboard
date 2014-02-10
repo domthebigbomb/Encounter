@@ -175,9 +175,11 @@
                     <navigationItem key="navigationItem" id="utb-4f-ddE"/>
                     <connections>
                         <outlet property="mapNavigationBar" destination="utb-4f-ddE" id="uHX-RZ-7tg"/>
+                        <segue destination="W5P-fj-uhv" kind="unwind" identifier="cancel" unwindAction="cancel:" id="mBo-Hf-GxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4e-hd-B4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="W5P-fj-uhv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1358" y="43"/>
         </scene>

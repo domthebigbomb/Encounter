@@ -74,37 +74,12 @@
                     randPin = arc4random() % (9999 - 1000 +1) + 1000;
                     // pins can be anywhere 1000 - 9999
                     
-                    _pinLabel.text = [NSString stringWithFormat:@"%d", randPin];
                 }
             }
         }while(found == YES);
-    }];
-}
+        _pinLabel.text = [NSString stringWithFormat:@"%d", randPin];
 
--(BOOL)roomPinIsOpen:(int)roomPin{
-    // call firebase to see if room Pin already exists. If not then return YES else return NO
-    __block BOOL found = NO;
-    __block BOOL hasObserved = NO;
-    [session observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot){
-            NSDictionary* usedPins = snapshot.value;
-            int usedPin;
-            hasObserved = YES;
-            for(id key in usedPins){
-                usedPin = [[NSString stringWithFormat:@"%@", key] intValue];
-                if(roomPin == usedPin){
-                    found = YES;
-                    break;
-                }
-            }
     }];
-    
-    do{
-    }while(!hasObserved);
-    if(found == YES){
-        return NO;
-    }else{
-        return YES;
-    }
 }
 
 

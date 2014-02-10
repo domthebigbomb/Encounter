@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MapSessionViewController.m"
-            timestampString = "410917820.539798"
+            timestampString = "413741686.974547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MapSessionViewController.m"
-            timestampString = "410917949.350944"
+            timestampString = "413741686.974547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "-refreshMyLocation"
             landmarkType = "5">
          </BreakpointContent>
@@ -38,17 +38,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapSessionViewController.m"
-            timestampString = "410977820.421241"
+            filePath = "Encounter/CreateRoomViewController.m"
+            timestampString = "413741317.086458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "-foundButton:"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-generateRoomPin"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[CreateRoomViewController generateRoomPin]_block_invoke"
+                  moduleName = "Encounter"
+                  urlString = "file:///Users/domthebigbomb/Documents/iOS_Dev/Encounter/Encounter/CreateRoomViewController.m"
+                  timestampString = "413741738.735706"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[CreateRoomViewController generateRoomPin]_block_invoke"
+                  moduleName = "Encounter"
+                  urlString = "file:///Users/domthebigbomb/Documents/iOS_Dev/Encounter/Encounter/CreateRoomViewController.m"
+                  timestampString = "413741738.736003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "699">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

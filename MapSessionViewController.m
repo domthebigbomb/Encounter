@@ -62,6 +62,8 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 - (void)viewDidLoad {
+    NSLog(@"Map Room View");
+
     [super viewDidLoad];
     
     UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
@@ -225,11 +227,11 @@
 
 -(IBAction)foundButton:(UIButton *)sender{
     //MAKE FOUND BUTTON UNWIND SEGUE
-    //[self performSegueWithIdentifier:@"cancel" sender:self];
+    [self performSegueWithIdentifier:@"cancel" sender:self];
      //[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
-- (void)didTapFitBounds {
+- (void)didTapFitBounds{
     GMSCoordinateBounds *bounds;
     for (GMSMarker *marker in markers_) {
         if (bounds == nil) {
